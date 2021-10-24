@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../style.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Movie Time</title>
+  </head>
+  <body onload="getMovies(URL)">
+    <nav>
+      <a href="index.html"><img src="../logo.PNG" alt="logo"/></a>
+    </nav>
+    <div class="container">
+      <div class="sort-by">
+        <label for="sort">Sort By: </label>
+        <select id="sort">
+          <option value="popular" selected>Popular</option>
+          <option value="now_playing">Now Playing</option>
+          <option value="my_favorites">My Favorites</option>
+        </select>
+      </div>
+      <div id="title" class="title">
+        POPULAR MOVIES
+      </div>
+      <!-- list movies - card -->
+      <div id="movies"></div>
+
+      <!-- Message - No movies found -->
+      <div id="not-found"></div>
+
+      <!-- Page switching -->
+      <div id="pagination"></div>
+    </div>
+
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>
